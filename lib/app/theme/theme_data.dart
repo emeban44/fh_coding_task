@@ -5,4 +5,9 @@ class CustomTheme {
   final themeData = ThemeData(
     primarySwatch: primaryBlack,
   );
+
+  final blueRoundedBorderDecoration = BoxDecoration(
+    border: Border.all(color: Colors.blue),
+    borderRadius: BorderRadius.circular(15),
+  );
 }
