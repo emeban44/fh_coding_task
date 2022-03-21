@@ -1,3 +1,5 @@
+import 'package:fh_home_coding_task/app/view/widget_library/custom_icon_text_row.dart';
+import 'package:fh_home_coding_task/app/view/widget_library/custom_rounded_black_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -36,10 +38,15 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Text('CLICK'),
+                      CustomRoundedBlackButton(
+                        childWidget: Row(
+                          children: [
+                            CustomIconTextRow(
+                                icon: Icon(Icons.add), text: 'CONTACT'),
+                          ],
+                        ),
                       ),
                     ],
                   )

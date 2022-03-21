@@ -1,3 +1,4 @@
+import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:fh_home_coding_task/app/view/home/page/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -14,9 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Future Home',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: CustomTheme().themeData,
       home: const HomePage(),
     );
   }
