@@ -1,16 +1,13 @@
-import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/board_member_button_row.dart';
-import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/board_member_row.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/box_body.dart';
-import 'package:fh_home_coding_task/app/view/home/widgets/common_area_svg_image.dart';
-import 'package:fh_home_coding_task/app/view/home/widgets/common_area_text.dart';
-import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/email_icon_row.dart';
-import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/phone_icon_row.dart';
+import 'package:fh_home_coding_task/app/view/home/widgets/smoke_detector_box/box_body.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_icon_text_row.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_rounded_black_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeBody extends StatelessWidget {
+  const HomeBody({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,6 +23,7 @@ class HomeBody extends StatelessWidget {
             ],
           ),
           const BoardMemberBoxBody(),
+          const SmokeDetectorBoxBody(),
         ],
       ),
     );
@@ -34,7 +32,30 @@ class HomeBody extends StatelessWidget {
   Widget _buildCommonAreaRow(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: const [CommonAreaSvgImage(), CommonAreaText()],
+      children: [
+        _buildCommonAreaSvgImage(context),
+        _buildCommonAreaText(context),
+      ],
+    );
+  }
+
+  Widget _buildCommonAreaSvgImage(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(right: 5),
+      child: SvgPicture.asset(
+        'common_area.svg',
+        width: MediaQuery.of(context).size.width * 0.02,
+      ),
+    );
+  }
+
+  Widget _buildCommonAreaText(BuildContext context) {
+    return Text(
+      'Common area',
+      style: TextStyle(
+        fontSize: MediaQuery.of(context).size.width * 0.01,
+        fontWeight: FontWeight.w600,
+      ),
     );
   }
 

@@ -1,5 +1,7 @@
+import 'package:fh_home_coding_task/app/helpers/edge_insets_helper.dart';
 import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/phone_icon_row.dart';
+import 'package:fh_home_coding_task/app/view/home/widgets/bold_text.dart';
 import 'package:flutter/material.dart';
 
 import 'board_member_button_row.dart';
@@ -15,9 +17,9 @@ class BoardMemberBoxBody extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          margin: const EdgeInsets.symmetric(vertical: 12.5),
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-          decoration: CustomTheme().blueRoundedBorderDecoration,
+          margin: blueBorderedBoxMargin,
+          padding: blueBorderedBoxPadding,
+          decoration: CustomTheme.blueRoundedBorderDecoration,
           child: _buildBody(context),
         ),
         _buildPositionedUpArrow(context),
@@ -60,21 +62,9 @@ class BoardMemberBoxBody extends StatelessWidget {
       children: [
         BoardMemberIconRow(),
         const SizedBox(height: 15),
-        _buildUpdatedAtText(context),
+        BoldText('UPDATED AT'),
         const SizedBox(height: 15),
         BoardMemberButtonRow(),
-      ],
-    );
-  }
-
-  Widget _buildUpdatedAtText(BuildContext context) {
-    return Row(
-      children: const [
-        SizedBox(width: 5),
-        Text(
-          'UPDATED AT',
-          style: TextStyle(fontWeight: FontWeight.w700),
-        ),
       ],
     );
   }
