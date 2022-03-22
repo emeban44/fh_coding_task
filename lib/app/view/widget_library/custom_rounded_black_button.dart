@@ -28,9 +28,7 @@ class CustomRoundedBlackButton extends StatelessWidget {
             ),
           ),
           onPressed: () {},
-          child: FittedBox(
-            child: childWidget,
-          ),
+          child: FittedBox(child: childWidget),
         ),
       ),
     );

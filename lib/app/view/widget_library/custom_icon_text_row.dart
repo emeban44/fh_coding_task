@@ -26,10 +26,7 @@ class CustomIconTextRow extends StatelessWidget {
             margin: const EdgeInsets.only(right: 5),
             child: Icon(iconData, size: iconSize),
           ),
-        Text(
-          text,
-          style: getBodyTextStyle(context),
-        ),
+        Text(text, style: getBodyTextStyle(context)),
         if (isIconLast)
           Container(
             margin: const EdgeInsets.only(left: 5),

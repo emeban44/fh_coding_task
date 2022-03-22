@@ -11,10 +11,7 @@ class BoardMemberIconRow extends StatelessWidget {
       children: [
         SvgPicture.asset('assets/board_member.svg'),
         const SizedBox(width: 5),
-        Text(
-          'Board member',
-          style: getBodyTextStyle(context),
-        ),
+        Text('Board member', style: getBodyTextStyle(context)),
         const SizedBox(width: 5),
         SvgPicture.asset('assets/copy.svg'),
       ],

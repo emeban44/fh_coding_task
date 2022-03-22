@@ -8,7 +8,6 @@ import 'package:fh_home_coding_task/app/view/widget_library/custom_divider_space
 import 'package:fh_home_coding_task/app/view/widget_library/detector_data_row.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/detector_status_row.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class SmokeDetectorBoxBody extends StatelessWidget {
   const SmokeDetectorBoxBody({Key? key}) : super(key: key);
@@ -33,22 +32,26 @@ class SmokeDetectorBoxBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildSmokeDetectorColumn(context),
-            const CustomDividerSpace(),
-            _buildSmokeDataColumn(context),
-            const CustomDividerSpace(),
-            const DetectorStatusRow(status: 'Tampered'),
-            const CustomDividerSpace(),
-            const DetectorStatusRow(status: 'Configured'),
-          ],
-        ),
+        _buildDataRow(context),
         const SizedBox(height: 15),
         const SmokeDetectorButtonRow(),
         const SizedBox(height: 15),
+      ],
+    );
+  }
+
+  Widget _buildDataRow(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildSmokeDetectorColumn(context),
+        const CustomDividerSpace(),
+        _buildSmokeDataColumn(context),
+        const CustomDividerSpace(),
+        const DetectorStatusRow(status: 'Tampered'),
+        const CustomDividerSpace(),
+        const DetectorStatusRow(status: 'Configured'),
       ],
     );
   }

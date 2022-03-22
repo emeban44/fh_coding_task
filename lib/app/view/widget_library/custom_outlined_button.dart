@@ -16,11 +16,7 @@ class CustomOutlinedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        //width: MediaQuery.of(context).size.width * 0.125,
-        //padding: const EdgeInsets.symmetric(vertical: 10),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-        ),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
         margin: EdgeInsets.symmetric(
           horizontal: horizontalMargin ?? 0,
           vertical: verticalMargin ?? 0,
@@ -37,9 +33,7 @@ class CustomOutlinedButton extends StatelessWidget {
             ),
           ),
           onPressed: () {},
-          child: FittedBox(
-            child: childWidget,
-          ),
+          child: FittedBox(child: childWidget),
         ),
       ),
     );

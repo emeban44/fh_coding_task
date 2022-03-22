@@ -13,10 +13,7 @@ class PhoneIconRow extends StatelessWidget {
       children: [
         SvgPicture.asset('assets/phone.svg'),
         const SizedBox(width: 5),
-        Text(
-          phone,
-          style: getBodyTextStyle(context),
-        ),
+        Text(phone, style: getBodyTextStyle(context)),
         const SizedBox(width: 5),
         SvgPicture.asset('assets/copy.svg'),
       ],

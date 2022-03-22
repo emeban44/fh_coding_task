@@ -12,14 +12,10 @@ class EmailIconRow extends StatelessWidget {
     return Expanded(
       child: SizedBox(
         width: getHomeColumnWidth(context),
-        //height: 20,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              email,
-              style: getBodyTextStyle(context),
-            ),
+            Text(email, style: getBodyTextStyle(context)),
             const SizedBox(width: 5),
             SvgPicture.asset('assets/copy.svg'),
           ],

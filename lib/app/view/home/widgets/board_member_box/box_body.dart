@@ -34,25 +34,29 @@ class BoardMemberBoxBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildBoardMemberColumn(context),
-            const CustomDividerSpace(),
-            _buildPhoneAndDateColumn(
-              context,
-              phone: '+47 444 44 444',
-              date: '01.01.1970.',
-            ),
-            const CustomDividerSpace(),
-            _buildPriorityText(context, 'Priority 1'),
-            const CustomDividerSpace(),
-            const EmailIconRow('@ mario@castle.com'),
-          ],
-        ),
+        _buildDataRow(context),
         const SizedBox(height: 15),
         const BoardMemberButtonRow(),
         const SizedBox(height: 15),
+      ],
+    );
+  }
+
+  Widget _buildDataRow(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildBoardMemberColumn(context),
+        const CustomDividerSpace(),
+        _buildPhoneAndDateColumn(
+          context,
+          phone: '+47 444 44 444',
+          date: '01.01.1970.',
+        ),
+        const CustomDividerSpace(),
+        _buildPriorityText(context, 'Priority 1'),
+        const CustomDividerSpace(),
+        const EmailIconRow('@ mario@castle.com'),
       ],
     );
   }
@@ -95,10 +99,7 @@ class BoardMemberBoxBody extends StatelessWidget {
         children: [
           PhoneIconRow(phone),
           const SizedBox(height: 15),
-          Text(
-            date,
-            style: getBodyTextStyle(context),
-          ),
+          Text(date, style: getBodyTextStyle(context)),
         ],
       ),
     );

@@ -8,18 +8,17 @@ class BoxIconTitleRow extends StatelessWidget {
     required this.title,
     Key? key,
   }) : super(key: key);
+
   final String assetPath;
   final String title;
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         SvgPicture.asset(assetPath),
         const SizedBox(width: 5),
-        Text(
-          title,
-          style: getBodyTextStyle(context),
-        ),
+        Text(title, style: getBodyTextStyle(context)),
       ],
     );
   }

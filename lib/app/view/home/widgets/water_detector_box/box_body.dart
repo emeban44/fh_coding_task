@@ -8,7 +8,6 @@ import 'package:fh_home_coding_task/app/view/widget_library/custom_divider_space
 import 'package:fh_home_coding_task/app/view/widget_library/detector_data_row.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/detector_status_row.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class WaterDetectorBoxBody extends StatelessWidget {
   const WaterDetectorBoxBody({Key? key}) : super(key: key);
@@ -33,22 +32,26 @@ class WaterDetectorBoxBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildWaterDetectorColumn(context),
-            const CustomDividerSpace(),
-            _buildWaterDataColumn(context),
-            const CustomDividerSpace(),
-            const DetectorStatusRow(status: 'Secured'),
-            const CustomDividerSpace(),
-            const DetectorStatusRow(status: 'Configured'),
-          ],
-        ),
+        _buildDataRow(context),
         const SizedBox(height: 15),
         const WaterDetectorButtonRow(),
         const SizedBox(height: 15),
+      ],
+    );
+  }
+
+  Widget _buildDataRow(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildWaterDetectorColumn(context),
+        const CustomDividerSpace(),
+        _buildWaterDataColumn(context),
+        const CustomDividerSpace(),
+        const DetectorStatusRow(status: 'Secured'),
+        const CustomDividerSpace(),
+        const DetectorStatusRow(status: 'Configured'),
       ],
     );
   }

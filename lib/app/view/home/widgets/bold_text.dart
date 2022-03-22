@@ -11,8 +11,9 @@ class BoldText extends StatelessWidget {
         Text(
           text,
           style: TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: MediaQuery.of(context).size.width * 0.01),
+            fontWeight: FontWeight.w700,
+            fontSize: MediaQuery.of(context).size.width * 0.01,
+          ),
         ),
       ],
     );

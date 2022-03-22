@@ -20,10 +20,7 @@ class DetectorStatusRow extends StatelessWidget {
               margin: const EdgeInsets.only(right: 5),
               child: SvgPicture.asset('assets/check.svg'),
             ),
-          Text(
-            status,
-            style: getBodyTextStyle(context),
-          ),
+          Text(status, style: getBodyTextStyle(context)),
         ],
       ),
     );
