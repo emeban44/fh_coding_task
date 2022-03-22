@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/box_body.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/smoke_detector_box/box_body.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/water_detector_box/box_body.dart';
@@ -19,14 +17,7 @@ class HomeBody extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 50),
       child: Column(
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildCommonAreaRow(context),
-              _buildTopRightButtonRow(context),
-            ],
-          ),
+          _buildHeaderRow(context),
           const BoardMemberBoxBody(),
           const SmokeDetectorBoxBody(),
           const WaterDetectorBoxBody(),
@@ -35,23 +26,32 @@ class HomeBody extends StatelessWidget {
     );
   }
 
+  Widget _buildHeaderRow(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        _buildCommonAreaRow(context),
+        _buildTopRightButtonRow(context),
+      ],
+    );
+  }
+
   Widget _buildCommonAreaRow(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         _buildCommonAreaSvgImage(context),
+        const SizedBox(width: 5),
         _buildCommonAreaText(context),
       ],
     );
   }
 
   Widget _buildCommonAreaSvgImage(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(right: 5),
-      child: SvgPicture.asset(
-        'assets/common_area.svg',
-        width: MediaQuery.of(context).size.width * 0.02,
-      ),
+    return SvgPicture.asset(
+      'assets/common_area.svg',
+      width: MediaQuery.of(context).size.width * 0.02,
     );
   }
 
@@ -74,42 +74,34 @@ class HomeBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.end,
         children: const [
-          Expanded(
-            child: CustomRoundedBlackButton(
-              horizontalMargin: 5,
-              childWidget: CustomIconTextRow(
-                iconData: Icons.add,
-                text: 'CONTACT',
-              ),
+          CustomRoundedBlackButton(
+            horizontalMargin: 5,
+            childWidget: CustomIconTextRow(
+              iconData: Icons.add,
+              text: 'CONTACT',
             ),
           ),
-          Expanded(
-            child: CustomRoundedBlackButton(
-              horizontalMargin: 5,
-              childWidget: CustomIconTextRow(
-                iconData: Icons.add,
-                text: 'ROOM',
-              ),
+          CustomRoundedBlackButton(
+            horizontalMargin: 5,
+            childWidget: CustomIconTextRow(
+              iconData: Icons.add,
+              text: 'ROOM',
             ),
           ),
-          Expanded(
-            child: CustomRoundedBlackButton(
-              horizontalMargin: 5,
-              childWidget: CustomIconTextRow(
-                iconData: Icons.add,
-                text: 'DEVICE',
-              ),
+          CustomRoundedBlackButton(
+            horizontalMargin: 5,
+            childWidget: CustomIconTextRow(
+              iconData: Icons.add,
+              text: 'DEVICE',
             ),
           ),
-          Expanded(
-            child: CustomRoundedBlackButton(
-              horizontalMargin: 5,
-              childWidget: CustomIconTextRow(
-                iconData: Icons.arrow_forward_ios,
-                iconSize: 15,
-                isIconLast: true,
-                text: '8 NOTES',
-              ),
+          CustomRoundedBlackButton(
+            horizontalMargin: 5,
+            childWidget: CustomIconTextRow(
+              iconData: Icons.arrow_forward_ios,
+              iconSize: 15,
+              isIconLast: true,
+              text: '8 NOTES',
             ),
           ),
         ],

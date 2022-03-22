@@ -2,6 +2,7 @@ import 'package:fh_home_coding_task/app/helpers/edge_insets_helper.dart';
 import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/phone_icon_row.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/bold_text.dart';
+import 'package:fh_home_coding_task/app/view/home/widgets/positioned_arrow_up.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_divider_space.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -24,7 +25,7 @@ class BoardMemberBoxBody extends StatelessWidget {
           decoration: CustomTheme.blueRoundedBorderDecoration,
           child: _buildBody(context),
         ),
-        _buildPositionedUpArrow(context),
+        const ArrowUpPositioned(),
       ],
     );
   }
@@ -33,25 +34,21 @@ class BoardMemberBoxBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-          //width: MediaQuery.of(context).size.width * 0.70,
-          child: Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildBoardMemberColumn(context),
-              const CustomDividerSpace(),
-              _buildPhoneAndDateColumn(
-                context,
-                phone: '+47 444 44 444',
-                date: '01.01.1970.',
-              ),
-              const CustomDividerSpace(),
-              _buildPriorityText(context, 'Priority 1'),
-              const CustomDividerSpace(),
-              const EmailIconRow('@ mario@castle.com'),
-            ],
-          ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildBoardMemberColumn(context),
+            const CustomDividerSpace(),
+            _buildPhoneAndDateColumn(
+              context,
+              phone: '+47 444 44 444',
+              date: '01.01.1970.',
+            ),
+            const CustomDividerSpace(),
+            _buildPriorityText(context, 'Priority 1'),
+            const CustomDividerSpace(),
+            const EmailIconRow('@ mario@castle.com'),
+          ],
         ),
       ],
     );
@@ -77,11 +74,11 @@ class BoardMemberBoxBody extends StatelessWidget {
       width: getHomeColumnWidth(context),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           BoardMemberIconRow(),
-          const SizedBox(height: 15),
+          SizedBox(height: 15),
           BoldText('UPDATED AT'),
-          const SizedBox(height: 5),
+          SizedBox(height: 5),
           BoardMemberButtonRow(),
         ],
       ),
@@ -102,17 +99,6 @@ class BoardMemberBoxBody extends StatelessWidget {
             style: getBodyTextStyle(context),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildPositionedUpArrow(BuildContext context) {
-    return const Positioned(
-      top: 15,
-      right: 5,
-      child: Icon(
-        Icons.keyboard_arrow_up_outlined,
-        size: 25,
       ),
     );
   }

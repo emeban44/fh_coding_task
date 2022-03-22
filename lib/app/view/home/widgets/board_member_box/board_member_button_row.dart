@@ -8,9 +8,8 @@ class BoardMemberButtonRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: getHomeColumnWidth(context),
-      // margin: const EdgeInsets.only(right: 25),
       child: Row(
         children: [
           CustomRoundedBlackButton(

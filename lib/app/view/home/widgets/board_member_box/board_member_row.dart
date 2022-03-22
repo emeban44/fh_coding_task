@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class BoardMemberIconRow extends StatelessWidget {
+  const BoardMemberIconRow({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Row(

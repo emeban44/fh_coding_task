@@ -13,81 +13,91 @@ class SmokeDetectorButtonRow extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(
-            width: MediaQuery.of(context).size.width * 0.6,
-            child: Row(
-              children: [
-                CustomRoundedBlackButton(
-                  childWidget: Text(
-                    'EDIT',
-                    style: getBodyTextStyle(context),
-                  ),
-                ),
-                const SizedBox(width: 5),
-                CustomRoundedBlackButton(
-                  childWidget: Text(
-                    'UNPAIR',
-                    style: getBodyTextStyle(context),
-                  ),
-                ),
-                const SizedBox(width: 5),
-                CustomRoundedBlackButton(
-                  childWidget: Text(
-                    'DELETE',
-                    style: getBodyTextStyle(context),
-                  ),
-                ),
-                const SizedBox(width: 5),
-                CustomRoundedBlackButton(
-                  childWidget: Text(
-                    'IDENTIFY',
-                    style: getBodyTextStyle(context),
-                  ),
-                ),
-                const SizedBox(width: 5),
-                CustomRoundedBlackButton(
-                  childWidget: Text(
-                    'PING',
-                    style: getBodyTextStyle(context),
-                  ),
-                ),
-                const SizedBox(width: 5),
-                CustomRoundedBlackButton(
-                  childWidget: Text(
-                    'SENSITIVITY',
-                    style: getBodyTextStyle(context),
-                  ),
-                ),
-                const SizedBox(width: 5),
-                const CustomOutlinedButton(childWidget: Text('TEST SIREN'))
-              ],
+          _buildLeftButtonRow(context),
+          _buildRightButtonRow(context),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildLeftButtonRow(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.55,
+      child: Row(
+        children: [
+          CustomRoundedBlackButton(
+            childWidget: Text(
+              'EDIT',
+              style: getBodyTextStyle(context),
             ),
           ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width * 0.2,
-            child: Row(
-              children: const [
-                CustomRoundedBlackButton(
-                  horizontalMargin: 5,
-                  childWidget: CustomIconTextRow(
-                    iconData: Icons.arrow_forward_ios,
-                    iconSize: 15,
-                    isIconLast: true,
-                    text: 'TIMELINE',
-                  ),
-                ),
-                CustomRoundedBlackButton(
-                  horizontalMargin: 5,
-                  childWidget: CustomIconTextRow(
-                    iconData: Icons.arrow_forward_ios,
-                    iconSize: 15,
-                    isIconLast: true,
-                    text: '8 NOTES',
-                  ),
-                ),
-              ],
+          const SizedBox(width: 5),
+          CustomRoundedBlackButton(
+            childWidget: Text(
+              'UNPAIR',
+              style: getBodyTextStyle(context),
             ),
+          ),
+          const SizedBox(width: 5),
+          CustomRoundedBlackButton(
+            childWidget: Text(
+              'DELETE',
+              style: getBodyTextStyle(context),
+            ),
+          ),
+          const SizedBox(width: 5),
+          CustomRoundedBlackButton(
+            childWidget: Text(
+              'IDENTIFY',
+              style: getBodyTextStyle(context),
+            ),
+          ),
+          const SizedBox(width: 5),
+          CustomRoundedBlackButton(
+            childWidget: Text(
+              'PING',
+              style: getBodyTextStyle(context),
+            ),
+          ),
+          const SizedBox(width: 5),
+          CustomRoundedBlackButton(
+            childWidget: Text(
+              'SENSITIVITY',
+              style: getBodyTextStyle(context),
+            ),
+          ),
+          const SizedBox(width: 5),
+          const CustomOutlinedButton(
+            childWidget: Text('TEST SIREN'),
           )
+        ],
+      ),
+    );
+  }
+
+  Widget _buildRightButtonRow(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.2,
+      child: Row(
+        children: const [
+          CustomRoundedBlackButton(
+            horizontalMargin: 5,
+            childWidget: CustomIconTextRow(
+              iconData: Icons.arrow_forward_ios,
+              iconSize: 15,
+              isIconLast: true,
+              text: 'TIMELINE',
+            ),
+          ),
+          CustomRoundedBlackButton(
+            horizontalMargin: 5,
+            childWidget: CustomIconTextRow(
+              iconData: Icons.arrow_forward_ios,
+              iconSize: 15,
+              isIconLast: true,
+              text: '8 NOTES',
+            ),
+          ),
         ],
       ),
     );

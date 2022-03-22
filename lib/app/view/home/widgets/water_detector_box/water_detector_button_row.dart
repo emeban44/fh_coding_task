@@ -1,6 +1,5 @@
 import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_icon_text_row.dart';
-import 'package:fh_home_coding_task/app/view/widget_library/custom_outlined_button.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_rounded_black_button.dart';
 import 'package:flutter/material.dart';
 
