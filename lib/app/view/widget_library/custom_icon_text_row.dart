@@ -1,3 +1,4 @@
+import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:flutter/material.dart';
 
 class CustomIconTextRow extends StatelessWidget {
@@ -27,6 +28,7 @@ class CustomIconTextRow extends StatelessWidget {
           ),
         Text(
           text,
+          style: getBodyTextStyle(context),
         ),
         if (isIconLast)
           Container(

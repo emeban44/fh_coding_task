@@ -67,8 +67,11 @@ class SmokeDetectorButtonRow extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 5),
-          const CustomOutlinedButton(
-            childWidget: Text('TEST SIREN'),
+          CustomOutlinedButton(
+            childWidget: Text(
+              'TEST SIREN',
+              style: getBodyTextStyle(context),
+            ),
           )
         ],
       ),

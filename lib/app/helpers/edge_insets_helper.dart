@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const EdgeInsets blueBorderedBoxMargin = EdgeInsets.only(bottom: 12.5);
+const EdgeInsets blueBorderedBoxMargin = EdgeInsets.only(top: 12.5);
 
 const EdgeInsets blueBorderedBoxPadding = EdgeInsets.only(
   top: 10,

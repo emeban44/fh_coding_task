@@ -68,7 +68,7 @@ class HomeBody extends StatelessWidget {
   Widget _buildTopRightButtonRow(BuildContext context) {
     return SizedBox(
       width: kIsWeb
-          ? MediaQuery.of(context).size.width * 0.35
+          ? MediaQuery.of(context).size.width * 0.4
           : MediaQuery.of(context).size.width * 0.5,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

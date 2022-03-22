@@ -46,8 +46,9 @@ class WaterDetectorBoxBody extends StatelessWidget {
             const DetectorStatusRow(status: 'Configured'),
           ],
         ),
-        //const SizedBox(height: 5),
+        const SizedBox(height: 15),
         const WaterDetectorButtonRow(),
+        const SizedBox(height: 15),
       ],
     );
   }
