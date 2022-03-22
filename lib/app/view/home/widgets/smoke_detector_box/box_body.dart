@@ -5,6 +5,7 @@ import 'package:fh_home_coding_task/app/view/home/widgets/bold_text.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/positioned_arrow_up.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/smoke_detector_box/smoke_detector_button_row.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_divider_space.dart';
+import 'package:fh_home_coding_task/app/view/widget_library/detector_data_row.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/detector_status_row.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -45,7 +46,7 @@ class SmokeDetectorBoxBody extends StatelessWidget {
             const DetectorStatusRow(status: 'Configured'),
           ],
         ),
-        const SizedBox(height: 5),
+        //const SizedBox(height: 5),
         const SmokeDetectorButtonRow(),
       ],
     );
@@ -78,22 +79,11 @@ class SmokeDetectorBoxBody extends StatelessWidget {
         children: [
           const DetectorStatusRow(status: 'Offline'),
           const SizedBox(height: 15),
-          _buildAddressDataRow(context),
+          const DetectorDataRow('2_0'),
           const SizedBox(height: 5),
           Text('1', style: getBodyTextStyle(context)),
         ],
       ),
-    );
-  }
-
-  Widget _buildAddressDataRow(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Text('2_0', style: getBodyTextStyle(context)),
-        const SizedBox(height: 5),
-        SvgPicture.asset('assets/copy.svg'),
-      ],
     );
   }
 }

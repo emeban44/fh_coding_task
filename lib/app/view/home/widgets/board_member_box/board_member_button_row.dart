@@ -9,7 +9,7 @@ class BoardMemberButtonRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: getHomeColumnWidth(context),
+      width: MediaQuery.of(context).size.width * 0.17,
       child: Row(
         children: [
           CustomRoundedBlackButton(

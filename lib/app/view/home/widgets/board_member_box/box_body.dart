@@ -50,6 +50,7 @@ class BoardMemberBoxBody extends StatelessWidget {
             const EmailIconRow('@ mario@castle.com'),
           ],
         ),
+        const BoardMemberButtonRow(),
       ],
     );
   }
@@ -78,8 +79,7 @@ class BoardMemberBoxBody extends StatelessWidget {
           BoardMemberIconRow(),
           SizedBox(height: 15),
           BoldText('UPDATED AT'),
-          SizedBox(height: 5),
-          BoardMemberButtonRow(),
+          SizedBox(height: 0),
         ],
       ),
     );

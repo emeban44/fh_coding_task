@@ -22,7 +22,7 @@ class SmokeDetectorButtonRow extends StatelessWidget {
 
   Widget _buildLeftButtonRow(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.55,
+      width: MediaQuery.of(context).size.width * 0.6,
       child: Row(
         children: [
           CustomRoundedBlackButton(

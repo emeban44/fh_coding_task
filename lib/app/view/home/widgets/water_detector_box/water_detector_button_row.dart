@@ -13,7 +13,7 @@ class WaterDetectorButtonRow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width * 0.3,
+            width: MediaQuery.of(context).size.width * 0.35,
             child: Row(
               children: [
                 CustomRoundedBlackButton(
