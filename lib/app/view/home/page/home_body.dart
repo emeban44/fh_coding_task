@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/box_body.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/smoke_detector_box/box_body.dart';
+import 'package:fh_home_coding_task/app/view/home/widgets/water_detector_box/box_body.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_icon_text_row.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_rounded_black_button.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,7 @@ class HomeBody extends StatelessWidget {
           ),
           const BoardMemberBoxBody(),
           const SmokeDetectorBoxBody(),
+          const WaterDetectorBoxBody(),
         ],
       ),
     );
