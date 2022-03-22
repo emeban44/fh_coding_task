@@ -10,11 +10,11 @@ class PhoneIconRow extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SvgPicture.asset('phone.svg'),
+        SvgPicture.asset('assets/phone.svg'),
         const SizedBox(width: 5),
         Text(phone),
         const SizedBox(width: 5),
-        SvgPicture.asset('copy.svg'),
+        SvgPicture.asset('assets/copy.svg'),
       ],
     );
   }

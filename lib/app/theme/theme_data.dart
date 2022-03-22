@@ -11,3 +11,11 @@ class CustomTheme {
     borderRadius: BorderRadius.circular(15),
   );
 }
+
+TextStyle getBodyTextStyle(BuildContext context) {
+  return TextStyle();
+  // return TextStyle(
+  //     fontSize: MediaQuery.of(context).size.width < 600
+  //         ? MediaQuery.of(context).size.width * 0.02
+  //         : MediaQuery.of(context).size.width * 0.06);
+}

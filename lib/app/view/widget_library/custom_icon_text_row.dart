@@ -1,3 +1,4 @@
+import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:flutter/material.dart';
 
 class CustomIconTextRow extends StatelessWidget {
@@ -26,7 +27,9 @@ class CustomIconTextRow extends StatelessWidget {
               margin: const EdgeInsets.only(right: 5),
               child: Icon(iconData, size: iconSize),
             ),
-          Text(text),
+          Text(
+            text,
+          ),
           if (isIconLast)
             Container(
               margin: const EdgeInsets.only(left: 5),

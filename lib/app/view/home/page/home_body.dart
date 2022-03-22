@@ -4,6 +4,7 @@ import 'package:fh_home_coding_task/app/view/widget_library/custom_icon_text_row
 import 'package:fh_home_coding_task/app/view/widget_library/custom_rounded_black_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({Key? key}) : super(key: key);
@@ -43,7 +44,7 @@ class HomeBody extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(right: 5),
       child: SvgPicture.asset(
-        'common_area.svg',
+        'assets/common_area.svg',
         width: MediaQuery.of(context).size.width * 0.02,
       ),
     );

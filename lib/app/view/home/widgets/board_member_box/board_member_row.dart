@@ -6,11 +6,11 @@ class BoardMemberIconRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset('board_member.svg'),
+        SvgPicture.asset('assets/board_member.svg'),
         const SizedBox(width: 5),
         Text('Board member'),
         const SizedBox(width: 5),
-        SvgPicture.asset('copy.svg'),
+        SvgPicture.asset('assets/copy.svg'),
       ],
     );
   }
