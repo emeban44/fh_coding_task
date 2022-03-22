@@ -12,7 +12,7 @@ class EmailIconRow extends StatelessWidget {
     return Expanded(
       child: SizedBox(
         width: getHomeColumnWidth(context),
-        height: 20,
+        //height: 20,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

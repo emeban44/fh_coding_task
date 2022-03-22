@@ -4,32 +4,26 @@ import 'package:fh_home_coding_task/app/view/widget_library/custom_rounded_black
 import 'package:flutter/material.dart';
 
 class BoardMemberButtonRow extends StatelessWidget {
+  const BoardMemberButtonRow({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: getHomeColumnWidth(context),
-      //margin: const EdgeInsets.only(right: 25),
+      // margin: const EdgeInsets.only(right: 25),
       child: Row(
         children: [
-          Expanded(
-            child: CustomRoundedBlackButton(
-              childWidget: FittedBox(
-                child: Text(
-                  'EDIT',
-                  style: getBodyTextStyle(context),
-                ),
-              ),
+          CustomRoundedBlackButton(
+            childWidget: Text(
+              'EDIT',
+              style: getBodyTextStyle(context),
             ),
           ),
           const SizedBox(width: 10),
-          Expanded(
-            child: CustomRoundedBlackButton(
-              childWidget: FittedBox(
-                child: Text(
-                  'DELETE',
-                  style: getBodyTextStyle(context),
-                ),
-              ),
+          CustomRoundedBlackButton(
+            childWidget: Text(
+              'DELETE',
+              style: getBodyTextStyle(context),
             ),
           )
         ],

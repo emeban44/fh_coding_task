@@ -2,6 +2,7 @@ import 'package:fh_home_coding_task/app/helpers/edge_insets_helper.dart';
 import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/box_icon_title_row.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/bold_text.dart';
+import 'package:fh_home_coding_task/app/view/home/widgets/smoke_detector_box/smoke_detector_button_row.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_divider_space.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -29,15 +30,15 @@ class SmokeDetectorBoxBody extends StatelessWidget {
                   width: getHomeColumnWidth(context),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      BoxIconTitleRow(
+                    children: [
+                      const BoxIconTitleRow(
                         assetPath: 'assets/smoke_detector.svg',
                         title: 'Smoke detector',
                       ),
-                      SizedBox(height: 10),
-                      BoldText('ADDRESS'),
-                      SizedBox(height: 5),
-                      BoldText('DEVICE ID'),
+                      const SizedBox(height: 15),
+                      const BoldText('ADDRESS'),
+                      const SizedBox(height: 5),
+                      const BoldText('DEVICE ID'),
                     ],
                   ),
                 ),
@@ -59,7 +60,7 @@ class SmokeDetectorBoxBody extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 10),
+                      const SizedBox(height: 15),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -108,6 +109,8 @@ class SmokeDetectorBoxBody extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 5),
+          SmokeDetectorButtonRow(),
         ],
       ),
     );

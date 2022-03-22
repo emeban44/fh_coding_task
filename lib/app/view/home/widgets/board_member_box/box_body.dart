@@ -81,7 +81,7 @@ class BoardMemberBoxBody extends StatelessWidget {
           BoardMemberIconRow(),
           const SizedBox(height: 15),
           BoldText('UPDATED AT'),
-          const SizedBox(height: 15),
+          const SizedBox(height: 5),
           BoardMemberButtonRow(),
         ],
       ),
