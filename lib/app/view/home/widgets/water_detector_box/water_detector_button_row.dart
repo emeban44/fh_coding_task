@@ -51,7 +51,6 @@ class WaterDetectorButtonRow extends StatelessWidget {
             child: Row(
               children: const [
                 CustomRoundedBlackButton(
-                  horizontalMargin: 5,
                   childWidget: CustomIconTextRow(
                     iconData: Icons.arrow_forward_ios,
                     iconSize: 15,
@@ -59,8 +58,8 @@ class WaterDetectorButtonRow extends StatelessWidget {
                     text: 'TIMELINE',
                   ),
                 ),
+                SizedBox(width: 5),
                 CustomRoundedBlackButton(
-                  horizontalMargin: 5,
                   childWidget: CustomIconTextRow(
                     iconData: Icons.arrow_forward_ios,
                     iconSize: 15,

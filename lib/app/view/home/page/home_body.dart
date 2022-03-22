@@ -14,7 +14,7 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 50),
+      margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
       child: Column(
         children: [
           _buildHeaderRow(context),
@@ -69,34 +69,33 @@ class HomeBody extends StatelessWidget {
     return SizedBox(
       width: kIsWeb
           ? MediaQuery.of(context).size.width * 0.35
-          : MediaQuery.of(context).size.width * 0.45,
+          : MediaQuery.of(context).size.width * 0.5,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.end,
         children: const [
           CustomRoundedBlackButton(
-            horizontalMargin: 5,
             childWidget: CustomIconTextRow(
               iconData: Icons.add,
               text: 'CONTACT',
             ),
           ),
+          SizedBox(width: 5),
           CustomRoundedBlackButton(
-            horizontalMargin: 5,
             childWidget: CustomIconTextRow(
               iconData: Icons.add,
               text: 'ROOM',
             ),
           ),
+          SizedBox(width: 5),
           CustomRoundedBlackButton(
-            horizontalMargin: 5,
             childWidget: CustomIconTextRow(
               iconData: Icons.add,
               text: 'DEVICE',
             ),
           ),
+          SizedBox(width: 5),
           CustomRoundedBlackButton(
-            horizontalMargin: 5,
             childWidget: CustomIconTextRow(
               iconData: Icons.arrow_forward_ios,
               iconSize: 15,
