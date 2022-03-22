@@ -1,16 +1,13 @@
 # fh_home_coding_task
 
-A new Flutter project.
+Responsive frontend design assignment.
 
-## Getting Started
+## Documentation
 
-This project is a starting point for a Flutter application.
+This project was developed in Flutter 2.10.2.
 
-A few resources to get you started if this is your first Flutter project:
+It was tested on various iPads and mainly on Google Chrome (web). On these devices it was fully functional and responsive. For iPads and iPhones, it works best in a horizontal landscape, and for the Web, it works best at >75% full screen.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+IDE used for development: Visual Studio Code
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The project architecture was inspired by my previous work and apps that I worked on during my Flutter career. I followed a CLEAN coding principle and tried to create as much reusable and readable code as possible.
