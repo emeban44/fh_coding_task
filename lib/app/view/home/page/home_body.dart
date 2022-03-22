@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/box_body.dart';
 import 'package:fh_home_coding_task/app/view/home/widgets/smoke_detector_box/box_body.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_icon_text_row.dart';
@@ -5,6 +7,7 @@ import 'package:fh_home_coding_task/app/view/widget_library/custom_rounded_black
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class HomeBody extends StatelessWidget {
   const HomeBody({Key? key}) : super(key: key);
@@ -61,40 +64,54 @@ class HomeBody extends StatelessWidget {
   }
 
   Widget _buildTopRightButtonRow(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: const [
-        CustomRoundedBlackButton(
-          horizontalMargin: 5,
-          childWidget: CustomIconTextRow(
-            iconData: Icons.add,
-            text: 'CONTACT',
+    return Container(
+      width: kIsWeb
+          ? MediaQuery.of(context).size.width * 0.3
+          : MediaQuery.of(context).size.width * 0.45,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: const [
+          Expanded(
+            child: CustomRoundedBlackButton(
+              horizontalMargin: 5,
+              childWidget: CustomIconTextRow(
+                iconData: Icons.add,
+                text: 'CONTACT',
+              ),
+            ),
           ),
-        ),
-        CustomRoundedBlackButton(
-          horizontalMargin: 5,
-          childWidget: CustomIconTextRow(
-            iconData: Icons.add,
-            text: 'ROOM',
+          Expanded(
+            child: CustomRoundedBlackButton(
+              horizontalMargin: 5,
+              childWidget: CustomIconTextRow(
+                iconData: Icons.add,
+                text: 'ROOM',
+              ),
+            ),
           ),
-        ),
-        CustomRoundedBlackButton(
-          horizontalMargin: 5,
-          childWidget: CustomIconTextRow(
-            iconData: Icons.add,
-            text: 'DEVICE',
+          Expanded(
+            child: CustomRoundedBlackButton(
+              horizontalMargin: 5,
+              childWidget: CustomIconTextRow(
+                iconData: Icons.add,
+                text: 'DEVICE',
+              ),
+            ),
           ),
-        ),
-        CustomRoundedBlackButton(
-          horizontalMargin: 5,
-          childWidget: CustomIconTextRow(
-            iconData: Icons.arrow_forward_ios,
-            iconSize: 15,
-            isIconLast: true,
-            text: '8 NOTES',
+          Expanded(
+            child: CustomRoundedBlackButton(
+              horizontalMargin: 5,
+              childWidget: CustomIconTextRow(
+                iconData: Icons.arrow_forward_ios,
+                iconSize: 15,
+                isIconLast: true,
+                text: '8 NOTES',
+              ),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

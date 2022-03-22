@@ -52,7 +52,10 @@ class SmokeDetectorBoxBody extends StatelessWidget {
                         child: Row(
                           children: [
                             SvgPicture.asset('assets/exclamation.svg'),
-                            Text('Offline'),
+                            Text(
+                              'Offline',
+                              style: getBodyTextStyle(context),
+                            ),
                           ],
                         ),
                       ),
@@ -60,13 +63,19 @@ class SmokeDetectorBoxBody extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text('2_0'),
+                          Text(
+                            '2_0',
+                            style: getBodyTextStyle(context),
+                          ),
                           const SizedBox(height: 5),
                           SvgPicture.asset('assets/copy.svg'),
                         ],
                       ),
                       const SizedBox(height: 5),
-                      Text('1'),
+                      Text(
+                        '1',
+                        style: getBodyTextStyle(context),
+                      ),
                     ],
                   ),
                 ),
@@ -76,7 +85,10 @@ class SmokeDetectorBoxBody extends StatelessWidget {
                   child: Row(
                     children: [
                       SvgPicture.asset('assets/exclamation.svg'),
-                      Text('Offline'),
+                      Text(
+                        'Offline',
+                        style: getBodyTextStyle(context),
+                      ),
                     ],
                   ),
                 ),
@@ -86,7 +98,10 @@ class SmokeDetectorBoxBody extends StatelessWidget {
                   child: Row(
                     children: [
                       SvgPicture.asset('assets/exclamation.svg'),
-                      Text('Offline'),
+                      Text(
+                        'Offline',
+                        style: getBodyTextStyle(context),
+                      ),
                     ],
                   ),
                 ),

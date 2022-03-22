@@ -1,3 +1,4 @@
+import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -12,7 +13,10 @@ class PhoneIconRow extends StatelessWidget {
       children: [
         SvgPicture.asset('assets/phone.svg'),
         const SizedBox(width: 5),
-        Text(phone),
+        Text(
+          phone,
+          style: getBodyTextStyle(context),
+        ),
         const SizedBox(width: 5),
         SvgPicture.asset('assets/copy.svg'),
       ],

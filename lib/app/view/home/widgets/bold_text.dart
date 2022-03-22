@@ -10,7 +10,9 @@ class BoldText extends StatelessWidget {
         const SizedBox(width: 5),
         Text(
           text,
-          style: const TextStyle(fontWeight: FontWeight.w700),
+          style: TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: MediaQuery.of(context).size.width * 0.01),
         ),
       ],
     );

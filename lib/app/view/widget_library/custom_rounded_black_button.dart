@@ -15,6 +15,8 @@ class CustomRoundedBlackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //width: MediaQuery.of(context).size.width * 0.125,
+      padding: const EdgeInsets.symmetric(vertical: 10),
       margin: EdgeInsets.symmetric(
         horizontal: horizontalMargin ?? 0,
         vertical: verticalMargin ?? 0,
@@ -27,7 +29,9 @@ class CustomRoundedBlackButton extends StatelessWidget {
           ),
         ),
         onPressed: () {},
-        child: childWidget,
+        child: FittedBox(
+          child: childWidget,
+        ),
       ),
     );
   }

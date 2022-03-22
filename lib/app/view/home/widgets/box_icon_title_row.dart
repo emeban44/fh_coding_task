@@ -1,3 +1,4 @@
+import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -15,7 +16,10 @@ class BoxIconTitleRow extends StatelessWidget {
       children: [
         SvgPicture.asset(assetPath),
         const SizedBox(width: 5),
-        Text(title),
+        Text(
+          title,
+          style: getBodyTextStyle(context),
+        ),
       ],
     );
   }

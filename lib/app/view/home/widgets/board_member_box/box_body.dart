@@ -4,6 +4,7 @@ import 'package:fh_home_coding_task/app/view/home/widgets/board_member_box/phone
 import 'package:fh_home_coding_task/app/view/home/widgets/bold_text.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_divider_space.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'board_member_button_row.dart';
 import 'board_member_row.dart';
@@ -59,7 +60,15 @@ class BoardMemberBoxBody extends StatelessWidget {
   Widget _buildPriorityText(BuildContext context, String priority) {
     return SizedBox(
       width: getHomeColumnWidth(context),
-      child: Text(priority),
+      child: Row(
+        children: [
+          Text(
+            priority,
+            style: getBodyTextStyle(context),
+          ),
+          SvgPicture.asset('assets/copy.svg', color: Colors.transparent)
+        ],
+      ),
     );
   }
 
@@ -88,7 +97,10 @@ class BoardMemberBoxBody extends StatelessWidget {
         children: [
           PhoneIconRow(phone),
           const SizedBox(height: 15),
-          Text(date),
+          Text(
+            date,
+            style: getBodyTextStyle(context),
+          ),
         ],
       ),
     );
