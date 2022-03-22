@@ -1,9 +1,12 @@
 import 'package:fh_home_coding_task/app/theme/theme_data.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_icon_text_row.dart';
+import 'package:fh_home_coding_task/app/view/widget_library/custom_outlined_button.dart';
 import 'package:fh_home_coding_task/app/view/widget_library/custom_rounded_black_button.dart';
 import 'package:flutter/material.dart';
 
 class SmokeDetectorButtonRow extends StatelessWidget {
+  const SmokeDetectorButtonRow({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -11,7 +14,7 @@ class SmokeDetectorButtonRow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width * 0.5,
+            width: MediaQuery.of(context).size.width * 0.6,
             child: Row(
               children: [
                 CustomRoundedBlackButton(
@@ -55,13 +58,15 @@ class SmokeDetectorButtonRow extends StatelessWidget {
                     style: getBodyTextStyle(context),
                   ),
                 ),
+                const SizedBox(width: 5),
+                const CustomOutlinedButton(childWidget: Text('TEST SIREN'))
               ],
             ),
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.2,
             child: Row(
-              children: [
+              children: const [
                 CustomRoundedBlackButton(
                   horizontalMargin: 5,
                   childWidget: CustomIconTextRow(
