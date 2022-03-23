@@ -14,8 +14,4 @@ class CustomTheme {
 
 TextStyle getBodyTextStyle(BuildContext context) {
   return TextStyle(fontSize: MediaQuery.of(context).size.width * 0.01);
-  // return TextStyle(
-  //     fontSize: MediaQuery.of(context).size.width < 600
-  //         ? MediaQuery.of(context).size.width * 0.02
-  //         : MediaQuery.of(context).size.width * 0.06);
 }

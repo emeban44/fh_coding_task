@@ -6,7 +6,7 @@ Responsive frontend design assignment.
 
 This project was developed in Flutter 2.10.2.
 
-It was tested on various iPads and mainly on Google Chrome (web). On these devices it was fully functional and responsive. For iPads and iPhones, it works best in a horizontal landscape, and for the Web, it works best at >75% full screen.
+It was tested on various iPads and mainly on Google Chrome (web). On these devices it was fully functional and responsive. For iPads and iPhones, it works best in a horizontal landscape, and for the Web, it works best at >55% screen width.
 
 IDE used for development: Visual Studio Code
 
